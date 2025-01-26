@@ -1,0 +1,66 @@
+.text-yellow {
+    color: #FFCC00; /* Color amarillo */
+}
+
+.bg-transparent {
+    background-color: transparent !important; /* Fondo transparente */
+}
+
+.custom-input {
+    background-color: #333; /* Fondo oscuro pero suave */
+    color: #fff; /* Texto blanco para contraste */
+    border: 2px solid #333; /* Bordes oscuros y sutiles */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px;
+    transition: all 0.3s ease; /* Transición suave */
+    font-size: 1rem;
+}
+
+.custom-input::placeholder {
+    color: #aaa; /* Placeholder en gris claro */
+    opacity: 1; /* Aseguramos que sea visible */
+}
+
+/* Estilo cuando el campo tiene el foco */
+.custom-input:focus {
+    outline: none; /* Eliminar borde azul */
+    border-color: #FFCC00; /* Bordes amarillos cuando están enfocados */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Resaltado amarillo */
+    color: #fff; /* Mantener el texto blanco */
+    background-color: #333; /* Mantener fondo oscuro al hacer foco */
+}
+
+.custom-input:focus::placeholder {
+    color: #aaa; /* El placeholder mantiene su color gris claro */
+}
+
+/* Estilo del formulario */
+form {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 40px; /* Espaciado interno */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Estilo de fuente elegante */
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FFCC00; /* Título en amarillo */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Estilo del botón */
+.btn-warning {
+    background-color: #FFCC00 !important;
+    border-color: #FFCC00 !important;
+    border-radius: 10px; /* Bordes del botón redondeados */
+    font-weight: bold;
+    padding: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e6b800 !important; /* Un color amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Efecto de agrandado */
+}

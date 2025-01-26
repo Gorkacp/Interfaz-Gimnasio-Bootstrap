@@ -1,0 +1,72 @@
+/* Aseguramos que html y body ocupen toda la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Carrusel de Videos */
+#video-carousel {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('/assets/imagen/Fondo.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Título centrado sobre el video */
+#video-carousel h2 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    z-index: 10;
+    text-align: center;
+}
+
+/* Estilo del video */
+#video-carousel video {
+    width: auto; /* Asegura que el ancho se ajuste automáticamente */
+    height: auto; /* Asegura que el alto se ajuste automáticamente */
+    max-width: 80%; /* Tamaño máximo en ancho */
+    max-height: 80%; /* Tamaño máximo en alto */
+    object-fit: contain; /* Mantiene las proporciones del video */
+    display: block; /* Elimina márgenes automáticos */
+    margin: auto; /* Centra el video dentro del contenedor */
+    z-index: 1;
+}
+
+/* Controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    filter: opacity(0.8);
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+

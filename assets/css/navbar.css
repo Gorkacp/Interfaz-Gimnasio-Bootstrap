@@ -1,0 +1,100 @@
+/* Navbar (barra de navegación) */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000; /* Asegura que el navbar esté encima de la imagen del hero */
+    padding: 0.76875rem 1.875rem; /* 12.3px 30px */
+    background-color: rgba(0, 0, 0, 0); /* Fondo inicial transparente */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sin sombra inicial */
+}
+
+/* Fondo común para header y el menú al abrir */
+header.open, .nav-links.open {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+/* Estilo para los enlaces de navegación */
+.navbar-nav .nav-item .nav-link {
+    color: white; /* Color blanco para los enlaces */
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+    font-weight: 600;
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto hover en los enlaces */
+.navbar-nav .nav-item .nav-link:hover {
+    color: #b98800; /* Color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Ajuste para el icono del menú hamburguesa */
+.navbar-toggler-icon {
+    background-color: white; /* Color del icono */
+}
+
+/* Diseño para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Cambia la dirección a columna */
+        gap: 1.25rem; /* Espaciado entre los enlaces */
+        position: absolute;
+        top: 3.75rem; /* Debajo del header */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+        width: 100%;
+        padding: 1.25rem; /* Espaciado interno */
+        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); /* Sombra */
+        display: none; /* Ocultar inicialmente */
+        opacity: 0; /* Desaparecer inicialmente */
+        visibility: hidden; /* Ocultar visualmente */
+        transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    }
+
+    .navbar-nav.show {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+}
+
+/* Modificaciones para pantallas grandes */
+@media (min-width: 992px) {
+    /* Aumentar tamaño del logo */
+    .navbar-brand img {
+        width: 80px; /* Aumentamos el tamaño del logo */
+        height: auto; /* Mantiene la proporción */
+    }
+
+    /* Aumentar tamaño de los enlaces */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.5rem; /* Aumentamos el tamaño de las letras */
+        padding: 0.75rem 1.5rem; /* Aumentamos el padding */
+    }
+
+    /* Aumentar el tamaño del navbar */
+    header {
+        padding: 1.25rem 2.5rem; /* Mayor espacio en el header */
+    }
+}
+
+/* Ajustes adicionales para pantallas grandes */
+@media (min-width: 1200px) {
+    /* Aumentar más el tamaño del logo si es necesario */
+    .navbar-brand img {
+        width: 100px; /* Tamaño más grande */
+    }
+
+    /* Aumentar más el tamaño de los enlaces */
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.75rem; /* Aumentamos aún más el tamaño */
+    }
+}

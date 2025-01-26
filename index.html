@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio Minimalista</title>
+    <!-- Cargando la fuente 'Roboto' desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/Servicios.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/Videos.css">
+    <link rel="stylesheet" href="assets/css/Contacto.css">
+</head> 
+<body>
+
+<!-- Menú de navegación -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <a class="navbar-brand" href="#hero">
+            <img src="assets/imagen/Logo.png" alt="Logo" width="40"> 
+        </a>
+        <!-- Botón del menú hamburguesa (visible solo en pantallas pequeñas) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de navegación colapsable -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#hero">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#video-carousel">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<header id="hero" class="hero">
+    <div class="hero-content mt-5"> <!-- Agregar margen superior para mover el contenido hacia abajo -->
+        <a href="#services" class="btn btn-primary btn-lg">Descubre Nuestros Servicios</a>
+    </div>
+</header>
+
+
+<!-- Services Section -->
+<section id="services" class="d-flex flex-column justify-content-center align-items-center bg-image text-white py-5" style="background-image: url('/assets/imagen/Fondo.jpg'); background-size: cover; background-position: center;">
+    <h2 class="text-center text-uppercase mb-4">Nuestros Servicios</h2>
+    
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <!-- Tarjeta 1 -->
+            <div class="col">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <img src="assets/imagen/1.png" class="card-img-top" alt="Imagen del servicio">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del servicio</h5>
+                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <img src="assets/imagen/2.png" class="card-img-top" alt="Imagen del servicio">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del servicio</h5>
+                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col">
+                <div class="card shadow-sm border-0 rounded-3">
+                    <img src="assets/imagen/3.png" class="card-img-top" alt="Imagen del servicio">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del servicio</h5>
+                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Carrusel de Videos -->
+<section id="video-carousel" class="video-carousel">
+    <h2 class="text-center">Nuestros Videos</h2>
+    <div id="carouselVideo" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video autoplay muted loop class="d-block w-100">
+                    <source src="assets/video/1.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video autoplay muted loop class="d-block w-100">
+                    <source src="assets/video/2.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video autoplay muted loop class="d-block w-100">
+                    <source src="assets/video/3.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselVideo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Sección Contactanos -->
+<section id="contact" class="d-flex justify-content-center align-items-center text-white" style="background-image: url('/assets/imagen/Fondo3.png'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 offset-md-6"> <!-- Alineamos el formulario a la derecha en pantallas grandes -->
+                <h2 class="mb-4 text-center">Contáctanos</h2>
+                <form action="#" method="POST" class="bg-transparent p-4 rounded shadow-lg">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button type="submit" class="btn btn-warning btn-lg w-100">Enviar mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-warning text-dark py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#" class="navbar-brand text-dark">
+                    <img src="assets/imagen/logo.png" alt="Logo" width="40"> Gimnasio Minimalista
+                </a>
+                <p>Alt Footer</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-dark">Contacto</h5>
+                <p class="text-dark">Paseo Marítimo Pablo Ruiz Picasso, 1, 29016 Málaga, España.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="text-dark">Redes Sociales</h5>
+                <a href="https://www.facebook.com" target="_blank" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

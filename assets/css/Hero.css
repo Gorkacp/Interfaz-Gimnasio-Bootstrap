@@ -1,0 +1,93 @@
+/* Hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Coloca los elementos en la parte superior */
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    padding: 20px; /* Espaciado interno */
+    background-image: url('/assets/imagen/Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    animation: fadeInUp 1s ease-out;
+    position: relative; /* Para evitar conflictos de superposición */
+    z-index: 0; /* Asegura que no interfiera con otras secciones */
+    margin-bottom: 0; /* Elimina espacios innecesarios al final */
+    border-bottom: 5px solid rgba(0, 0, 0, 0.1); /* Línea divisoria decorativa */
+}
+
+/* Hero content */
+.hero-content {
+    text-align: center; /* Centra el texto */
+    max-width: 600px; /* Limita el ancho del contenido */
+    margin-top: 15vh; /* Baja el contenido más cerca del centro */
+}
+
+/* Botón centrado en la parte inferior del hero */
+.hero .btn {
+    position: absolute;
+    left: 50%; /* Centra el botón horizontalmente */
+    bottom: 10%; /* Ajusta el espacio para mover el botón más abajo */
+    transform: translateX(-50%); /* Asegura que el botón esté centrado */
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+    padding: 0.75rem 1.5rem; /* Ajusta el tamaño del botón */
+    border-radius: 2rem; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto más grueso */
+    overflow: hidden; /* Para efectos con pseudo-elementos */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Asegura que el contenido esté delante del pseudo-elemento */
+    animation: fadeInUp 2.5s ease-out;
+    outline: none;
+    border: none; /* Asegúrate de que no haya bordes adicionales */
+}
+
+/* Efectos hover y foco para el botón */
+.hero .btn:hover {
+    transform: translateY(-3px) translateX(-50%); /* Eleva el botón ligeramente */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Incrementa la sombra */
+}
+
+.hero .btn:focus {
+    outline: none; /* Elimina el borde azul */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo al enfocarse */
+}
+
+.hero .btn:active {
+    transform: translateY(2px) translateX(-50%); /* Simula el pulsado */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Brillo */
+    opacity: 0;
+    border-radius: 2rem;
+    z-index: -1; /* Detrás del texto */
+    transition: opacity 0.3s ease;
+}
+
+.hero .btn:hover::after {
+    opacity: 1; /* Muestra el brillo */
+}
+
+/* Animación para el texto y el botón del Hero */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(1.25rem); } /* 20px */
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Desplazamiento suave al hacer clic */
+html {
+    scroll-behavior: smooth;
+}

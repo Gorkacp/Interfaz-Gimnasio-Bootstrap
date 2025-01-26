@@ -1,0 +1,107 @@
+#services {
+    height: 100vh; /* Altura completa de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/imagen/Fondo.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* La imagen cubrirá toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    padding: 3rem 0; /* Aumento de padding */
+    color: #f5f5f5; /* Color del texto más suave */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade un sombreado más suave al texto */
+    position: relative; /* Para que las tarjetas se ubiquen correctamente sobre la imagen */
+}
+
+#services h2 {
+    font-size: 2.5rem; /* Aumenta el tamaño del título */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: #f5f5f5; /* Color más suave y elegante para el título */
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2; /* Asegura que el título esté sobre las tarjetas */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85); /* Fondo semitransparente para un look limpio */
+    border-radius: 16px; /* Bordes más redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más profunda para mayor sofisticación */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+    width: 320px; /* Un ancho fijo para todas las tarjetas */
+    height: 450px; /* Un alto fijo para mantener el tamaño consistente */
+    margin: 1.5rem; /* Espaciado entre las tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1; /* Las tarjetas están por debajo del título */
+}
+
+.card-body {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Asegura que el contenido se ajuste al alto total de la tarjeta */
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333; /* Color más oscuro para el título */
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    color: #555; /* Color más suave para el texto */
+    line-height: 1.8; /* Mejor legibilidad */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.card-img-top {
+    border-bottom: 4px solid #f8f8f8; /* Separación entre la imagen y el contenido */
+    transition: transform 0.3s ease; /* Transición suave para el zoom */
+    height: 220px; /* Fijar la altura de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin distorsionarse */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+}
+
+/* Efecto de elevación para toda la tarjeta */
+.card:hover {
+    transform: scale(1.03); /* Ligeramente aumenta el tamaño para dar un toque elegante */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Efecto sutil de zoom sobre la imagen */
+}
+
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra pronunciada */
+}
+
+@media (max-width: 768px) {
+    #services {
+        padding: 2rem 0;
+    }
+
+    .card {
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: auto; /* Ajusta la altura en pantallas pequeñas */
+        margin-bottom: 2rem; /* Espacio entre tarjetas en dispositivos pequeños */
+    }
+
+    #services h2 {
+        font-size: 2rem; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+}
