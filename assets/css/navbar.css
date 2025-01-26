@@ -34,11 +34,37 @@ header.open, .nav-links.open {
 
 /* Ajuste para el icono del menú hamburguesa */
 .navbar-toggler-icon {
-    background-color: white; /* Color del icono */
+    width: 30px; /* Tamaño adecuado del icono */
+    height: 25px; /* Altura ajustada */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* Transición suave para el icono */
+}
+
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    content: '';
+    height: 3px; /* Grosor de las líneas */
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navbar-toggler-icon.open {
+    background-color: transparent; /* Elimina el fondo cuando se abre */
+}
+
+.navbar-toggler-icon.open:before {
+    transform: rotate(45deg) translate(5px, 5px); /* Rota la primera línea */
+}
+
+.navbar-toggler-icon.open:after {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rota la segunda línea */
 }
 
 /* Diseño para pantallas pequeñas */
 @media (max-width: 768px) {
+    /* Estilo para el menú de navegación */
     .navbar-nav {
         flex-direction: column;
         gap: 1.25rem;
@@ -55,21 +81,44 @@ header.open, .nav-links.open {
         transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
     }
 
+    /* Cuando el menú está visible */
     .navbar-nav.show {
         display: flex; /* Mostrar cuando se agrega la clase "show" */
         opacity: 1;
         visibility: visible;
     }
 
-    /* Asegurar que el botón hamburguesa cambie de color al abrir */
-    .navbar-toggler.collapsed .navbar-toggler-icon {
-        background-color: white; /* Color del icono cuando está cerrado */
+    /* Estilo para el icono de hamburguesa */
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.3s ease; /* Transición suave para el icono */
     }
 
-    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
-        background-color: #b98800; /* Color del icono cuando está abierto */
+    .navbar-toggler-icon:before,
+    .navbar-toggler-icon:after {
+        content: '';
+        height: 3px; /* Grosor de las líneas */
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .navbar-toggler-icon.open {
+        background-color: transparent; /* Elimina el fondo cuando se abre */
+    }
+
+    .navbar-toggler-icon.open:before {
+        transform: rotate(45deg) translate(5px, 5px); /* Rota la primera línea */
+    }
+
+    .navbar-toggler-icon.open:after {
+        transform: rotate(-45deg) translate(5px, -5px); /* Rota la segunda línea */
     }
 }
+
 
 /* Modificaciones para pantallas grandes */
 @media (min-width: 992px) {
