@@ -10,16 +10,16 @@ html, body {
 /* Carrusel de Videos */
 #video-carousel {
     display: flex;
-    flex-direction: column; /* Cambiar para que el título esté arriba */
-    align-items: center; /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Ocupa toda la pantalla en grandes dispositivos */
     overflow: hidden;
-    background: url('assets/imagen/Fondo.jpg') no-repeat center center; /* Fondo en CSS */
+    background: url('assets/imagen/Fondo.jpg') no-repeat center center;
     background-size: cover;
-    padding: 20px 0; /* Añadir un poco de espacio arriba y abajo */
+    padding: 20px 0;
 }
 
 /* Título centrado sobre el video */
@@ -29,16 +29,16 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-weight: bold;
     text-align: center;
-    width: 100%; /* Asegura que el título ocupe el 100% del contenedor */
-    margin-bottom: 20px; /* Añade un espacio entre el título y los videos */
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Estilo del video */
 #video-carousel video {
-    width: 100%; /* Asegura que el video ocupe todo el ancho disponible */
-    max-width: 800px; /* Límite de tamaño del video */
-    height: auto; /* Mantiene la proporción del video */
-    object-fit: contain; /* Mantiene las proporciones del video */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: contain;
     display: block;
     margin: auto;
 }
@@ -71,44 +71,60 @@ html, body {
 
 /* Para pantallas grandes */
 @media (min-width: 1200px) {
+    #video-carousel {
+        min-height: 100vh; /* Ocupa toda la pantalla */
+    }
+
     #video-carousel h2 {
-        font-size: 3rem; /* Aumenta el tamaño del título en pantallas grandes */
+        font-size: 3rem;
     }
 
     #video-carousel video {
-        max-width: 80%; /* Aumenta el tamaño máximo del video */
+        max-width: 80%;
     }
 }
 
 /* Para pantallas medianas */
 @media (max-width: 992px) {
+    #video-carousel {
+        min-height: 80vh; /* Ajusta el tamaño en pantallas medianas */
+    }
+
     #video-carousel h2 {
-        font-size: 2.5rem; /* Ajusta el tamaño del título */
+        font-size: 2.5rem;
     }
 
     #video-carousel video {
-        max-width: 90%; /* Reduce el tamaño máximo del video */
+        max-width: 90%;
     }
 }
 
 /* Para pantallas pequeñas */
 @media (max-width: 768px) {
+    #video-carousel {
+        min-height: 60vh; /* Menor altura para dispositivos pequeños */
+    }
+
     #video-carousel h2 {
-        font-size: 2rem; /* Ajusta el tamaño del título */
+        font-size: 2rem;
     }
 
     #video-carousel video {
-        max-width: 100%; /* Hace que el video ocupe el 100% del ancho disponible */
+        max-width: 100%;
     }
 }
 
 /* Para dispositivos muy pequeños */
 @media (max-width: 480px) {
+    #video-carousel {
+        min-height: 30vh; /* Reduce aún más la altura */
+    }
+
     #video-carousel h2 {
-        font-size: 1.5rem; /* Ajusta aún más el tamaño del título */
+        font-size: 1.5rem;
     }
 
     #video-carousel video {
-        max-width: 100%; /* Asegura que el video ocupe todo el ancho disponible */
+        max-width: 100%;
     }
 }
