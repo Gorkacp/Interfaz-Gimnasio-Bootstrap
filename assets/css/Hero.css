@@ -6,7 +6,7 @@
     align-items: center;
     height: 100vh; /* Altura completa de la ventana */
     padding: 20px; /* Espaciado interno */
-    background-image: url('assets/imagen/Banner.jpg');
+    background-image: url('/assets/imagen/Banner.jpg');
     background-size: cover;
     background-position: center;
     color: var(--secondary-color);
