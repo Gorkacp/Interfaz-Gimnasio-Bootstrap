@@ -10,40 +10,37 @@ html, body {
 /* Carrusel de Videos */
 #video-carousel {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    flex-direction: column; /* Cambiar para que el título esté arriba */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     background: url('assets/imagen/Fondo.jpg') no-repeat center center; /* Fondo en CSS */
     background-size: cover;
+    padding: 20px 0; /* Añadir un poco de espacio arriba y abajo */
 }
 
 /* Título centrado sobre el video */
 #video-carousel h2 {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-weight: bold;
-    z-index: 10;
     text-align: center;
+    width: 100%; /* Asegura que el título ocupe el 100% del contenedor */
+    margin-bottom: 20px; /* Añade un espacio entre el título y los videos */
 }
 
 /* Estilo del video */
 #video-carousel video {
-    width: auto; /* Asegura que el ancho se ajuste automáticamente */
-    height: auto; /* Asegura que el alto se ajuste automáticamente */
-    max-width: 80%; /* Tamaño máximo en ancho */
-    max-height: 80%; /* Tamaño máximo en alto */
+    width: 100%; /* Asegura que el video ocupe todo el ancho disponible */
+    max-width: 800px; /* Límite de tamaño del video */
+    height: auto; /* Mantiene la proporción del video */
     object-fit: contain; /* Mantiene las proporciones del video */
-    display: block; /* Elimina márgenes automáticos */
-    margin: auto; /* Centra el video dentro del contenedor */
-    z-index: 1;
+    display: block;
+    margin: auto;
 }
 
 /* Controles del carrusel */
@@ -68,4 +65,50 @@ html, body {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     opacity: 1;
+}
+
+/* Estilos responsivos */
+
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
+    #video-carousel h2 {
+        font-size: 3rem; /* Aumenta el tamaño del título en pantallas grandes */
+    }
+
+    #video-carousel video {
+        max-width: 80%; /* Aumenta el tamaño máximo del video */
+    }
+}
+
+/* Para pantallas medianas */
+@media (max-width: 992px) {
+    #video-carousel h2 {
+        font-size: 2.5rem; /* Ajusta el tamaño del título */
+    }
+
+    #video-carousel video {
+        max-width: 90%; /* Reduce el tamaño máximo del video */
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    #video-carousel h2 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+
+    #video-carousel video {
+        max-width: 100%; /* Hace que el video ocupe el 100% del ancho disponible */
+    }
+}
+
+/* Para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    #video-carousel h2 {
+        font-size: 1.5rem; /* Ajusta aún más el tamaño del título */
+    }
+
+    #video-carousel video {
+        max-width: 100%; /* Asegura que el video ocupe todo el ancho disponible */
+    }
 }
