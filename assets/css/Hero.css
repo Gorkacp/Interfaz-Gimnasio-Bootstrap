@@ -6,15 +6,14 @@
     align-items: center;
     height: 100vh; /* Altura completa de la ventana */
     padding: 20px; /* Espaciado interno */
-    background-image: url('/assets/imagen/Banner.jpg');
-    background-size: cover;
-    background-position: center;
     color: var(--secondary-color);
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUpText 1s ease-out; /* Aplica animación solo al texto */
     position: relative; /* Para evitar conflictos de superposición */
     z-index: 0; /* Asegura que no interfiera con otras secciones */
     margin-bottom: 0; /* Elimina espacios innecesarios al final */
     border-bottom: 5px solid rgba(0, 0, 0, 0.1); /* Línea divisoria decorativa */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
 }
 
 /* Hero content */
@@ -28,8 +27,8 @@
 .hero .btn {
     position: absolute;
     left: 50%; /* Centra el botón horizontalmente */
-    bottom: 10%; /* Ajusta el espacio para mover el botón más abajo */
     transform: translateX(-50%); /* Asegura que el botón esté centrado */
+    bottom: 10%; /* Ajusta el espacio para mover el botón más abajo */
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.9);
     color: white; /* Color del texto */
@@ -42,7 +41,6 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1; /* Asegura que el contenido esté delante del pseudo-elemento */
-    animation: fadeInUp 2.5s ease-out;
     outline: none;
     border: none; /* Asegúrate de que no haya bordes adicionales */
 }
@@ -81,9 +79,9 @@
     opacity: 1; /* Muestra el brillo */
 }
 
-/* Animación para el texto y el botón del Hero */
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(1.25rem); } /* 20px */
+/* Animación solo para el texto */
+@keyframes fadeInUpText {
+    0% { opacity: 0; transform: translateY(20px); } /* 20px */
     100% { opacity: 1; transform: translateY(0); }
 }
 
