@@ -4,8 +4,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10000; /* Asegura que el navbar esté encima de la imagen del hero */
-    padding: 0.76875rem 1.875rem; /* 12.3px 30px */
+    z-index: 625; /* 10000 / 16 */
+    padding: 0.048rem 1.25rem; /* 0.76875rem 1.875rem (12.3px 30px) */
     background-color: rgba(0, 0, 0, 0); /* Fondo inicial transparente */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
     box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Sin sombra inicial */
@@ -14,28 +14,28 @@ header {
 /* Fondo común para header y el menú al abrir */
 header.open, .nav-links.open {
     background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
-    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.5); /* Sombra suave */
+    box-shadow: 0 0.0195rem 0.0585rem rgba(0, 0, 0, 0.5); /* Sombra suave (0.3125rem 0.9375rem) */
 }
 
 /* Estilo para los enlaces de navegación */
 .navbar-nav .nav-item .nav-link {
     color: white; /* Color blanco para los enlaces */
-    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+    font-size: 1.2rem; /* 1.2rem */
     font-weight: 600;
-    padding: 0.5rem 1rem; /* Espaciado interno */
+    padding: 0.3125rem 0.625rem; /* Espaciado interno (0.5rem 1rem) */
     transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
 }
 
 /* Efecto hover en los enlaces - Mover hacia la derecha */
 .navbar-nav .nav-item .nav-link:hover {
     color: #b98800; /* Color al pasar el mouse */
-    transform: translateX(10px); /* Mover hacia la derecha */
+    transform: translateX(0.625rem); /* Mover hacia la derecha (10px) */
 }
 
 /* Ajuste para el icono del menú hamburguesa */
 .navbar-toggler-icon {
-    width: 30px; /* Tamaño adecuado del icono */
-    height: 25px; /* Altura ajustada */
+    width: 1.875rem; /* 30px */
+    height: 1.5625rem; /* 25px */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -45,9 +45,9 @@ header.open, .nav-links.open {
 .navbar-toggler-icon:before,
 .navbar-toggler-icon:after {
     content: '';
-    height: 3px; /* Grosor de las líneas */
+    height: 0.1875rem; /* 3px */
     width: 100%;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* 5px */
 }
 
 .navbar-toggler-icon.open {
@@ -55,26 +55,26 @@ header.open, .nav-links.open {
 }
 
 .navbar-toggler-icon.open:before {
-    transform: rotate(45deg) translate(5px, 5px); /* Rota la primera línea */
+    transform: rotate(45deg) translate(0.3125rem, 0.3125rem); /* Rota la primera línea */
 }
 
 .navbar-toggler-icon.open:after {
-    transform: rotate(-45deg) translate(5px, -5px); /* Rota la segunda línea */
+    transform: rotate(-45deg) translate(0.3125rem, -0.3125rem); /* Rota la segunda línea */
 }
 
 /* Diseño para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px */
     /* Estilo para el menú de navegación */
     .navbar-nav {
         flex-direction: column;
-        gap: 1.25rem;
+        gap: 1.25rem; /* 20px */
         position: absolute;
-        top: 3.75rem;
+        top: 3.75rem; /* 60px */
         left: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
         width: 100%;
         padding: 1.25rem;
-        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+        box-shadow: none; /* Elimina la sombra */
     }
 
     /* Al usar Bootstrap, no es necesario manipular manualmente la visibilidad */
@@ -83,17 +83,15 @@ header.open, .nav-links.open {
     }
 
     .navbar-collapse.collapse.show {
-        display: flex; 
+        display: flex;
     }
-
-    
 
     .navbar-toggler-icon:before,
     .navbar-toggler-icon:after {
         content: '';
-        height: 3px; /* Grosor de las líneas */
+        height: 0.1875rem; /* 3px */
         width: 100%;
-        border-radius: 5px;
+        border-radius: 0.3125rem; /* 5px */
     }
 
     .navbar-toggler-icon.open {
@@ -101,10 +99,10 @@ header.open, .nav-links.open {
     }
 
     .navbar-toggler-icon.open:before {
-        transform: rotate(45deg) translate(5px, 5px); /* Rota la primera línea */
+        transform: rotate(45deg) translate(0.3125rem, 0.3125rem); /* Rota la primera línea */
     }
 
     .navbar-toggler-icon.open:after {
-        transform: rotate(-45deg) translate(5px, -5px); /* Rota la segunda línea */
+        transform: rotate(-45deg) translate(0.3125rem, -0.3125rem); /* Rota la segunda línea */
     }
 }

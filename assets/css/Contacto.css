@@ -1,24 +1,37 @@
 /* Sección Contactanos */
 #contact {
     height: 100vh; /* Ocupa toda la pantalla en dispositivos grandes */
-    padding: 40px 20px; /* Espaciado en dispositivos pequeños */
+    padding: 2.5rem 1.25rem; /* Espaciado en dispositivos pequeños */
     background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
 }
 
 /* Responsividad para pantallas más pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px = 48rem */
     #contact {
         height: auto; /* Ajusta la altura automáticamente en dispositivos pequeños */
-        padding: 20px 10px; /* Reduce el espacio interno */
+        padding: 1.25rem 0.625rem; /* Reduce el espacio interno */
     }
 
     form {
-        padding: 20px; /* Reduce el espaciado interno del formulario */
+        padding: 1.25rem; /* Reduce el espaciado interno del formulario */
     }
 
     h2 {
-        font-size: 1.8rem; /* Reduce el tamaño del título */
-        margin-bottom: 15px;
+        font-size: 1.125rem; /* Reduce el tamaño del título */
+        margin-bottom: 0.9375rem; /* 15px = 0.9375rem */
+    }
+
+    /* Desplazar formulario a la derecha */
+    .container .row {
+        justify-content: flex-end; /* Mueve el formulario hacia la derecha */
+    }
+
+    .col-12.col-md-8.col-lg-6 {
+        display: flex;
+        justify-content: flex-end; /* Alinea el contenido hacia la derecha */
+    }
+
+    form {
+        width: 100%; /* Asegura que el formulario no se quede más pequeño */
     }
 }
-

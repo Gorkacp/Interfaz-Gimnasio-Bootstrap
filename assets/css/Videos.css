@@ -18,24 +18,24 @@ html, body {
     min-height: 100vh; /* Ocupa toda la pantalla en grandes dispositivos */
     overflow: hidden;
     background-size: cover;
-    padding: 20px 0;
+    padding: 1.25rem 0; /* 20px */
 }
 
 /* Título centrado sobre el video */
 #video-carousel h2 {
     color: #fff;
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 2rem; /* 32px */
+    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7); /* 2px 2px 4px */
     font-weight: bold;
     text-align: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem; /* 20px */
 }
 
 /* Estilo del video */
 #video-carousel video {
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem; /* 800px */
     height: auto;
     object-fit: contain;
     display: block;
@@ -47,8 +47,8 @@ html, body {
 .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
 }
 
 .carousel-control-prev,
@@ -69,13 +69,13 @@ html, body {
 /* Estilos responsivos */
 
 /* Para pantallas grandes */
-@media (min-width: 1200px) {
+@media (min-width: 75rem) { /* 1200px */
     #video-carousel {
         min-height: 100vh; /* Ocupa toda la pantalla */
     }
 
     #video-carousel h2 {
-        font-size: 3rem;
+        font-size: 3rem; /* 48px */
     }
 
     #video-carousel video {
@@ -84,13 +84,13 @@ html, body {
 }
 
 /* Para pantallas medianas */
-@media (max-width: 992px) {
+@media (max-width: 62rem) { /* 992px */
     #video-carousel {
         min-height: 80vh; /* Ajusta el tamaño en pantallas medianas */
     }
 
     #video-carousel h2 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* 40px */
     }
 
     #video-carousel video {
@@ -99,13 +99,13 @@ html, body {
 }
 
 /* Para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px */
     #video-carousel {
         min-height: 60vh; /* Menor altura para dispositivos pequeños */
     }
 
     #video-carousel h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* 32px */
     }
 
     #video-carousel video {
@@ -114,13 +114,13 @@ html, body {
 }
 
 /* Para dispositivos muy pequeños */
-@media (max-width: 480px) {
+@media (max-width: 30rem) { /* 480px */
     #video-carousel {
         min-height: 30vh; /* Reduce aún más la altura */
     }
 
     #video-carousel h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* 24px */
     }
 
     #video-carousel video {

@@ -5,13 +5,13 @@
     justify-content: flex-start; /* Coloca los elementos en la parte superior */
     align-items: center;
     height: 100vh; /* Altura completa de la ventana */
-    padding: 20px; /* Espaciado interno */
+    padding: 1.25rem; /* 20px */
     color: var(--secondary-color);
     animation: fadeInUpText 1s ease-out; /* Aplica animación solo al texto */
     position: relative; /* Para evitar conflictos de superposición */
     z-index: 0; /* Asegura que no interfiera con otras secciones */
     margin-bottom: 0; /* Elimina espacios innecesarios al final */
-    border-bottom: 5px solid rgba(0, 0, 0, 0.1); /* Línea divisoria decorativa */
+    border-bottom: 0.3125rem solid rgba(0, 0, 0, 0.1); /* Línea divisoria decorativa */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen */
 }
@@ -19,7 +19,7 @@
 /* Hero content */
 .hero-content {
     text-align: center; /* Centra el texto */
-    max-width: 600px; /* Limita el ancho del contenido */
+    max-width: 37.5rem; /* 600px */
     margin-top: 15vh; /* Baja el contenido más cerca del centro */
 }
 
@@ -33,12 +33,12 @@
     background-color: rgba(0, 0, 0, 0.9);
     color: white; /* Color del texto */
     text-decoration: none; /* Elimina subrayado */
-    padding: 0.75rem 1.5rem; /* Ajusta el tamaño del botón */
+    padding: 1.125rem 2.25rem; /* 18px 36px */
     border-radius: 2rem; /* Bordes redondeados */
     font-size: 1.2rem; /* Tamaño de fuente */
     font-weight: bold; /* Texto más grueso */
     overflow: hidden; /* Para efectos con pseudo-elementos */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 0.5rem 0.9375rem rgba(0, 0, 0, 0.2); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1; /* Asegura que el contenido esté delante del pseudo-elemento */
     outline: none;
@@ -47,18 +47,18 @@
 
 /* Efectos hover y foco para el botón */
 .hero .btn:hover {
-    transform: translateY(-3px) translateX(-50%); /* Eleva el botón ligeramente */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Incrementa la sombra */
+    transform: translateY(-0.1875rem) translateX(-50%); /* Eleva el botón ligeramente */
+    box-shadow: 0 0.75rem 1.5625rem rgba(0, 0, 0, 0.3); /* Incrementa la sombra */
 }
 
 .hero .btn:focus {
     outline: none; /* Elimina el borde azul */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Brillo al enfocarse */
+    box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5); /* Brillo al enfocarse */
 }
 
 .hero .btn:active {
-    transform: translateY(2px) translateX(-50%); /* Simula el pulsado */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0.125rem) translateX(-50%); /* Simula el pulsado */
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .hero .btn::after {
@@ -81,7 +81,7 @@
 
 /* Animación solo para el texto */
 @keyframes fadeInUpText {
-    0% { opacity: 0; transform: translateY(20px); } /* 20px */
+    0% { opacity: 0; transform: translateY(1.25rem); } /* 20px */
     100% { opacity: 1; transform: translateY(0); }
 }
 
@@ -93,10 +93,10 @@ html {
 /* Media Queries para Responsividad */
 
 /* Cuando la pantalla es más pequeña (menos de 768px) */
-@media (max-width: 768px) {
+@media (max-width: 48em) { /* 768px */
     .hero {
         height: 50vh; /* Reducir la altura a la mitad de la ventana */
-        padding: 15px; /* Reduce el espaciado interno */
+        padding: 0.9375rem; /* 15px */
     }
 
     .hero-content {
@@ -112,10 +112,10 @@ html {
 }
 
 /* Cuando la pantalla es más pequeña (menos de 480px) */
-@media (max-width: 480px) {
+@media (max-width: 30em) { /* 480px */
     .hero {
         height: 40vh; /* Reduce aún más la altura en pantallas más pequeñas */
-        padding: 10px; /* Ajusta el espaciado */
+        padding: 0.625rem; /* 10px */
     }
 
     .hero-content {

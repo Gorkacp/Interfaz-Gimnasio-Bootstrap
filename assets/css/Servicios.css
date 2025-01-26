@@ -5,12 +5,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 20px;
+    padding: 1.25rem; /* 20px */
     color: var(--secondary-color);
     background-size: cover;
     background-position: center;
     position: relative;
-    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0.3125rem solid rgba(0, 0, 0, 0.1); /* 5px */
 }
 
 /* Servicios */
@@ -22,34 +22,33 @@
     background-image: url('assets/imagen/Fondo.jpg');
     background-size: cover;
     background-position: center;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem; /* 3rem = 48px, 1rem = 16px */
     color: #f5f5f5;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5); /* 4px, 8px */
     height: auto;
 }
 
 #services h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* 40px */
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* 32px */
     color: white; /* Cambiar color del título a blanco */
 }
 
-
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* 300px */
+    gap: 1.5rem; /* 24px */
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem; /* 1200px */
 }
 
 .card {
     background: rgba(255, 255, 255, 0.85);
-    border-radius: 16px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem; /* 16px */
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2); /* 6px, 12px */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -58,11 +57,11 @@
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); /* 16px, 32px */
 }
 
 .card-img-top {
-    height: 200px;
+    height: 12.5rem; /* 200px */
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -72,46 +71,46 @@
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 1.5rem; /* 24px */
 }
 
 .card-title {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* 25.6px */
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* 16px */
 }
 
 .card-text {
-    font-size: 1rem;
+    font-size: 1rem; /* 16px */
     color: #555;
     line-height: 1.6;
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 48rem) { /* 768px */
     #services {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem; /* 32px, 16px */
     }
 
     #services h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* 32px */
     }
 
     .cards-container {
-        gap: 1rem;
+        gap: 1rem; /* 16px */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) { /* 480px */
     #services h2 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* 28.8px */
     }
 
     .card-title {
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* 22.4px */
     }
 
     .card-text {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* 14.4px */
     }
 }

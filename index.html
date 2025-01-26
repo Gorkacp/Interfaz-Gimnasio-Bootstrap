@@ -8,12 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/Hero.css">
-    <link rel="stylesheet" href="assets/css/Servicios.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/Videos.css">
-    <link rel="stylesheet" href="assets/css/Contacto.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 </head> 
 <body>
 
@@ -70,7 +65,7 @@
 
 <!-- Services Section -->
 <section id="services" class="text-center text-light py-5" style="background-image: url('assets/imagen/Fondo.jpg'); background-size: cover; background-position: center;">
-    <h2 class="mb-4">Nuestros Servicios</h2>
+    <h2 class="mb-4">Nuestros Servicios </h2>
     <div class="container">
         <div class="row">
             <!-- Tarjeta 1 -->
@@ -78,8 +73,8 @@
                 <div class="card bg-light">
                     <img src="assets/imagen/1.png" class="card-img-top" alt="Imagen del servicio">
                     <div class="card-body">
-                        <h5 class="card-title">Título del servicio 1</h5>
-                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                        <h5 class="card-title">Entrenamiento Personalizado</h5>
+                        <p class="card-text">Nuestros entrenadores te guiarán a través de planes de entrenamiento adaptados a tus necesidades individuales para maximizar tus resultados.</p>
                     </div>
                 </div>
             </div>
@@ -88,8 +83,8 @@
                 <div class="card bg-light">
                     <img src="assets/imagen/2.png" class="card-img-top" alt="Imagen del servicio">
                     <div class="card-body">
-                        <h5 class="card-title">Título del servicio 2</h5>
-                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                        <h5 class="card-title">Clases Grupales</h5>
+                        <p class="card-text">Únete a nuestras clases grupales, donde la motivación y el trabajo en equipo te ayudarán a alcanzar tus objetivos mientras te diviertes.</p>
                     </div>
                 </div>
             </div>
@@ -98,14 +93,15 @@
                 <div class="card bg-light">
                     <img src="assets/imagen/3.png" class="card-img-top" alt="Imagen del servicio">
                     <div class="card-body">
-                        <h5 class="card-title">Título del servicio 3</h5>
-                        <p class="card-text">Descripción breve del servicio ofrecido. Puedes incluir detalles adicionales aquí.</p>
+                        <h5 class="card-title">Asesoría Nutricional</h5>
+                        <p class="card-text">Acompáñanos en un viaje hacia un estilo de vida saludable con asesoramiento nutricional personalizado para alcanzar tus metas de salud.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -149,19 +145,19 @@
 <section id="contact" class="d-flex justify-content-center align-items-center text-white" style="background-image: url('assets/imagen/Contacto.png'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6"> <!-- Ajuste de tamaños según el dispositivo -->
+            <div class="col-12 col-md-8 col-lg-6 offset-lg-6"> <!-- Ajuste para mover el formulario a la derecha en pantallas grandes -->
                 <h2 class="mb-4 text-center">Contáctanos</h2>
-                <form action="#" method="POST" class="bg-transparent p-4 rounded shadow-lg">
-                    <div class="mb-3">
+                <form action="#" method="POST" class="bg-transparent p-4 rounded shadow-lg d-flex flex-column align-items-end">
+                    <div class="mb-3 w-100">
                         <input type="text" class="form-control custom-input" id="name" placeholder="Tu nombre" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 w-100">
                         <input type="email" class="form-control custom-input" id="email" placeholder="Tu correo electrónico" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 w-100">
                         <textarea class="form-control custom-input" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
                     </div>
-                    <div class="mb-3 text-center">
+                    <div class="mb-3 text-center w-100">
                         <button type="submit" class="btn btn-warning btn-lg w-100">Enviar mensaje</button>
                     </div>
                 </form>
@@ -169,6 +165,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 <!-- Footer --> 
