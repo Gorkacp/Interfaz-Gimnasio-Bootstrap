@@ -75,28 +75,18 @@ header.open, .nav-links.open {
         width: 100%;
         padding: 1.25rem;
         box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
-        display: none; /* Ocultar inicialmente */
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
     }
 
-    /* Cuando el menú está visible */
-    .navbar-nav.show {
-        display: flex; /* Mostrar cuando se agrega la clase "show" */
-        opacity: 1;
-        visibility: visible;
+    /* Al usar Bootstrap, no es necesario manipular manualmente la visibilidad */
+    .collapse {
+        display: none;
     }
 
-    /* Estilo para el icono de hamburguesa */
-    .navbar-toggler-icon {
-        width: 30px;
-        height: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s ease; /* Transición suave para el icono */
+    .navbar-collapse.collapse.show {
+        display: flex; 
     }
+
+    
 
     .navbar-toggler-icon:before,
     .navbar-toggler-icon:after {
@@ -116,39 +106,5 @@ header.open, .nav-links.open {
 
     .navbar-toggler-icon.open:after {
         transform: rotate(-45deg) translate(5px, -5px); /* Rota la segunda línea */
-    }
-}
-
-
-/* Modificaciones para pantallas grandes */
-@media (min-width: 992px) {
-    /* Aumentar tamaño del logo */
-    .navbar-brand img {
-        width: 80px; /* Aumentamos el tamaño del logo */
-        height: auto; /* Mantiene la proporción */
-    }
-
-    /* Aumentar tamaño de los enlaces */
-    .navbar-nav .nav-item .nav-link {
-        font-size: 1.5rem; /* Aumentamos el tamaño de las letras */
-        padding: 0.75rem 1.5rem; /* Aumentamos el padding */
-    }
-
-    /* Aumentar el tamaño del navbar */
-    header {
-        padding: 1.25rem 2.5rem; /* Mayor espacio en el header */
-    }
-}
-
-/* Ajustes adicionales para pantallas grandes */
-@media (min-width: 1200px) {
-    /* Aumentar más el tamaño del logo si es necesario */
-    .navbar-brand img {
-        width: 100px; /* Tamaño más grande */
-    }
-
-    /* Aumentar más el tamaño de los enlaces */
-    .navbar-nav .nav-item .nav-link {
-        font-size: 1.75rem; /* Aumentamos aún más el tamaño */
     }
 }
