@@ -95,7 +95,7 @@ html {
 /* Cuando la pantalla es más pequeña (menos de 768px) */
 @media (max-width: 768px) {
     .hero {
-        height: auto; /* Deja que la altura se ajuste al contenido */
+        height: 50vh; /* Reducir la altura a la mitad de la ventana */
         padding: 15px; /* Reduce el espaciado interno */
     }
 
@@ -113,13 +113,18 @@ html {
 
 /* Cuando la pantalla es más pequeña (menos de 480px) */
 @media (max-width: 480px) {
-    .hero .btn {
-        font-size: 0.9rem; /* Disminuye aún más el tamaño de la fuente */
-        padding: 0.4rem 0.8rem; /* Ajusta el tamaño del botón */
+    .hero {
+        height: 40vh; /* Reduce aún más la altura en pantallas más pequeñas */
+        padding: 10px; /* Ajusta el espaciado */
     }
 
     .hero-content {
         margin-top: 5vh; /* Ajusta el margen superior */
         max-width: 90%; /* Aumenta un poco el ancho en móviles pequeños */
+    }
+
+    .hero .btn {
+        font-size: 0.9rem; /* Disminuye aún más el tamaño de la fuente */
+        padding: 0.4rem 0.8rem; /* Ajusta el tamaño del botón */
     }
 }

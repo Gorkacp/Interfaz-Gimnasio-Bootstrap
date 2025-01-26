@@ -7,6 +7,7 @@
     <!-- Cargando la fuente 'Roboto' desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/Hero.css">
     <link rel="stylesheet" href="assets/css/Servicios.css">
@@ -49,8 +50,8 @@
 
 
 <!-- Hero Section -->
-<header id="hero" class="hero" style="background-image: url('assets/imagen/Fondox.png');">
-    <div class="hero-content mt-5"> <!-- Agregar margen superior para mover el contenido hacia abajo -->
+<header id="hero" class="hero d-flex flex-column justify-content-start align-items-center text-center bg-cover bg-center" style="background-image: url('assets/imagen/Fondox.png');">
+    <div class="hero-content mt-5">
         <a href="#services" class="btn btn-primary btn-lg">Descubre Nuestros Servicios</a>
     </div>
 </header>
@@ -137,20 +138,20 @@
 
 
 <!-- Sección Contactanos -->
-<section id="contact" class="d-flex justify-content-center align-items-center text-white" style="background-image: url('assets/imagen/Contacto.png'); background-size: cover; background-position: center; height: 100vh;">
+<section id="contact" class="d-flex justify-content-center align-items-center text-white" style="background-image: url('assets/imagen/Contacto.png'); background-size: cover; background-position: center;">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 offset-md-6"> <!-- Alineamos el formulario a la derecha en pantallas grandes -->
+            <div class="col-12 col-md-8 col-lg-6"> <!-- Ajuste de tamaños según el dispositivo -->
                 <h2 class="mb-4 text-center">Contáctanos</h2>
                 <form action="#" method="POST" class="bg-transparent p-4 rounded shadow-lg">
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                        <input type="text" class="form-control custom-input" id="name" placeholder="Tu nombre" required>
                     </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                        <input type="email" class="form-control custom-input" id="email" placeholder="Tu correo electrónico" required>
                     </div>
                     <div class="mb-3">
-                        <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                        <textarea class="form-control custom-input" id="message" rows="4" placeholder="Tu mensaje" required></textarea>
                     </div>
                     <div class="mb-3 text-center">
                         <button type="submit" class="btn btn-warning btn-lg w-100">Enviar mensaje</button>
@@ -162,28 +163,34 @@
 </section>
 
 
-<!-- Footer -->
+<!-- Footer --> 
 <footer class="bg-warning text-dark py-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <!-- Logo -->
+            <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
                 <a href="#" class="navbar-brand text-dark">
                     <img src="assets/imagen/Logo.png" alt="Logo" width="40">
                 </a>
             </div>
-            <div class="col-md-4">
+            <!-- Ubicación -->
+            <div class="col-12 col-sm-6 col-md-4 mb-3 mb-md-0">
                 <h5 class="text-dark">Ubicación</h5>
                 <p class="text-dark">Paseo Marítimo Pablo Ruiz Picasso, 1, 29016 Málaga, España.</p>
             </div>
-            <div class="col-md-4">
+            <!-- Redes Sociales -->
+            <div class="col-12 col-md-4 text-center text-md-start">
                 <h5 class="text-dark">Redes Sociales</h5>
-                <a href="https://www.facebook.com" target="_blank" class="text-dark me-3"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://www.instagram.com" target="_blank" class="text-dark me-3"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://twitter.com" target="_blank" class="text-dark"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="text-dark me-3"><i class="fab fa-facebook fa-2x" style="color: black;"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="text-dark me-3"><i class="fab fa-instagram fa-2x" style="color: black;"></i></a>
+                <a href="https://twitter.com" target="_blank" class="text-dark"><i class="fab fa-twitter fa-2x" style="color: black;"></i></a>
             </div>
         </div>
     </div>
 </footer>
+
+
+
 <script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -34,7 +34,9 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    color: white; /* Cambiar color del título a blanco */
 }
+
 
 .cards-container {
     display: grid;

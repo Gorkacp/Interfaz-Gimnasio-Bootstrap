@@ -17,7 +17,6 @@ html, body {
     width: 100%;
     min-height: 100vh; /* Ocupa toda la pantalla en grandes dispositivos */
     overflow: hidden;
-    background: url('assets/imagen/Fondo.jpg') no-repeat center center;
     background-size: cover;
     padding: 20px 0;
 }
