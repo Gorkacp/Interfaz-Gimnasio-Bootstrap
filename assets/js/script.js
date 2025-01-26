@@ -14,6 +14,7 @@ const navbarNav = document.querySelector('#navbarNav');
 
 // Añadimos el evento click para mostrar/ocultar el menú
 menuToggle.addEventListener('click', () => {
+    navbarNav.classList.toggle('collapse');
     navbarNav.classList.toggle('show');
 });
 
@@ -23,6 +24,9 @@ document.addEventListener('click', (event) => {
         navbarNav.classList.remove('show');
     }
 });
+
+
+
 
 
 

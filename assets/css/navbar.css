@@ -26,10 +26,10 @@ header.open, .nav-links.open {
     transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
 }
 
-/* Efecto hover en los enlaces */
+/* Efecto hover en los enlaces - Mover hacia la derecha */
 .navbar-nav .nav-item .nav-link:hover {
     color: #b98800; /* Color al pasar el mouse */
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    transform: translateX(10px); /* Mover hacia la derecha */
 }
 
 /* Ajuste para el icono del menú hamburguesa */
