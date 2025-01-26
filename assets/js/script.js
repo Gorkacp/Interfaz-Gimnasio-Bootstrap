@@ -6,3 +6,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+    // Seleccionamos el botón y el menú
+    const menuToggle = document.querySelector('.navbar-toggler');
+    const navbarNav = document.querySelector('#navbarNav');
+    
+    // Añadimos el evento click para mostrar/ocultar el menú
+    menuToggle.addEventListener('click', () => {
+        navbarNav.classList.toggle('show');
+    });
+

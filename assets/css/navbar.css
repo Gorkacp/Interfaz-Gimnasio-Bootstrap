@@ -40,31 +40,28 @@ header.open, .nav-links.open {
 /* Diseño para pantallas pequeñas */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Cambia la dirección a columna */
-        gap: 1.25rem; /* Espaciado entre los enlaces */
+        flex-direction: column;
+        gap: 1.25rem;
         position: absolute;
-        top: 3.75rem; /* Debajo del header */
+        top: 3.75rem;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+        background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
-        padding: 1.25rem; /* Espaciado interno */
-        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); /* Sombra */
+        padding: 1.25rem;
+        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
         display: none; /* Ocultar inicialmente */
-        opacity: 0; /* Desaparecer inicialmente */
-        visibility: hidden; /* Ocultar visualmente */
+        opacity: 0;
+        visibility: hidden;
         transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
     }
 
     .navbar-nav.show {
-        display: flex;
+        display: flex; /* Mostrar cuando se agrega la clase "show" */
         opacity: 1;
         visibility: visible;
     }
-
-    .navbar-toggler {
-        border: none;
-    }
 }
+
 
 /* Modificaciones para pantallas grandes */
 @media (min-width: 992px) {
