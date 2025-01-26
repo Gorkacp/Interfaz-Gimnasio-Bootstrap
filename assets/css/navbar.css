@@ -60,8 +60,16 @@ header.open, .nav-links.open {
         opacity: 1;
         visibility: visible;
     }
-}
 
+    /* Asegurar que el botón hamburguesa cambie de color al abrir */
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-color: white; /* Color del icono cuando está cerrado */
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-color: #b98800; /* Color del icono cuando está abierto */
+    }
+}
 
 /* Modificaciones para pantallas grandes */
 @media (min-width: 992px) {
